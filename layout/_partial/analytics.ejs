@@ -8,7 +8,6 @@ ga('create', '<%= theme.google_analytics.id %>', '<%= theme.google_analytics.sit
 ga('send', 'pageview');
 </script>
 <% } %>
-
 <% if (theme.baidu_tongji.enable){ %>
 <script>
 var _hmt = _hmt || [];
@@ -20,7 +19,9 @@ var _hmt = _hmt || [];
 })();
 </script>
 <% } %>
-
 <% if (theme.cnzz_tongji.enable){ %>
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_<%= theme.cnzz_tongji.siteid %>'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D<%= theme.cnzz_tongji.siteid %>' type='text/javascript'%3E%3C/script%3E"));</script>
+<% } %>
+<% if (theme.ta_tongji.enable){ %>
+  <script type="text/javascript" src="http://tajs.qq.com/stats?sId=<%= theme.ta_tongji.sId %>" charset="UTF-8"></script>
 <% } %>
